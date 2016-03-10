@@ -75,7 +75,7 @@ CPU     ID                    FUNCTION:NAME
 \begin{frame}[fragile]
   \frametitle{A more complex example}
 \begin{lstlisting}
-dtrace -n 'syscall::write:entry /arg2 != 0/ { printf("write size % d\n", arg2); } '
+dtrace -n 'syscall::write:entry /arg2 != 0/ { printf("write size %d\n", arg2); } '
 dtrace: description 'syscall::write:entry ' matched 2 probes
 CPU     ID                    FUNCTION:NAME
 0  50978                      write:entry write size 1
